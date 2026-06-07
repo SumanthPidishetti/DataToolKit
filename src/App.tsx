@@ -10,15 +10,11 @@ import {
   UploadCloud, 
   Cpu, 
   Binary, 
-  LayoutDashboard, 
-  Eye, 
   Terminal,
   Activity,
-  History,
   BrainCircuit,
   Search,
   CheckCircle,
-  Play,
   ArrowRight,
   Code
 } from 'lucide-react';
@@ -242,7 +238,8 @@ function App() {
               
               {activities.length > 0 ? (
                 <div className="divide-y divide-slate-100 font-mono text-xs">
-                  {activities.map((act, index) => (
+                  {/* FIXED: Added typed context parameters inside the commented template mapping check */}
+                  {activities.map((act: any, index: number) => (
                     <div key={index} className="p-4 flex items-center justify-between hover:bg-slate-50/70 transition-colors">
                       <div className="space-y-0.5">
                         <div className="font-semibold text-slate-800 text-xs flex items-center gap-2">
